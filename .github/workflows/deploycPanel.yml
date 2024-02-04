@@ -1,23 +1,28 @@
-name: Publish Website to CPanel
-
 on:
-  push:
-    branches:
-      - main
-
+push:
+branches:
+- main
+name:
 jobs:
-  FTP-Deploy-Action:
-    name: FTP-Deploy-Action
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2.1.0
-        with:
-          fetch-depth: 2
-
-      - name: Deploy to FTP
-        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+Deploy website on push
+web-deploy:
+name: Deploy
+runs-on: ubuntu-latest
+steps:
+- name: Get latest code
+uses: actions/checkout@v3
+- name: Install Node.js
+uses:
+with:
+actions/setup-node@v3
+node-version: 18.x
+name: Install NPM packages
+run: npm install
+name: Build project
+run: npm run build
+Sync files I
+name:
+uses: Samkirkland/FTP-Deploy-Action@v4.3.4
         with:
           ftp-server: ftp.mix.co.ke
           ftp-username: gitaccess@jojosfashion.com
