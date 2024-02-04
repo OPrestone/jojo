@@ -8,17 +8,18 @@ on:
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
-    runs-on: ubuntu-latest 
-
+    runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout Repository
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        uses: actions/checkout@v2.1.0
         with:
           fetch-depth: 2
 
       - name: Deploy to FTP
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
-          ftp-server: ${{ secrets.FTP_SERVER }}
-          ftp-username: ${{ secrets.FTP_USERNAME }}
-          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          ftp-server: ftp.mix.co.ke
+          ftp-username: gitaccess@jojosfashion.com
+          ftp-password: ${{ secrets.FTP_PASSWORD }}  # Make sure to set up FTP_PASSWORD as a secret in your GitHub repository
+          local-dir: ./jojosfashion.com/testing/  # Specify the local directory you want to deploy
