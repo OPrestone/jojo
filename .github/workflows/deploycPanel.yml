@@ -22,4 +22,4 @@ jobs:
           ftp-server: ftp.mix.co.ke
           ftp-username: gitaccess@jojosfashion.com
           ftp-password: ${{ secrets.FTP_PASSWORD }}  # Make sure to set up FTP_PASSWORD as a secret in your GitHub repository
-          local-dir: ./jojosfashion.com/testing/  # Specify the local directory you want to deploy
+          local-dir: ./fashion/jojo/  # Specify the local directory you want to deploy
