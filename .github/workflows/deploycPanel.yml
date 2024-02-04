@@ -32,3 +32,7 @@ jobs:
         ftp-username: gitaccess@jojosfashion.com
         ftp-password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./fashion/
+- name: Debug Deployment
+  run: |
+    ls -la ./fashion/  # List files in the deployment directory
+    cat /path/to/ftp-deploy-action.log  # Print contents of the action's log file (if available)
