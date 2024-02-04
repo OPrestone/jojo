@@ -8,8 +8,8 @@ on:
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
-    runs-on: [ubuntu-latest, windows-latest, macos-latest]  # Specify multiple platforms
-    
+    runs-on: ubuntu-latest 
+
     steps:
       - name: Checkout Repository
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
