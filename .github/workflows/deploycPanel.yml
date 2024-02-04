@@ -8,7 +8,7 @@ on:
 jobs:
   FTP-Deploy-Action:
     name: FTP-Deploy-Action
-    runs-on: [ubuntu-latest, windows-latest, macos-latest]  # Specify multiple platforms
+    runs-on: [macos-latest]  # Specify multiple platforms
     
     steps:
       - name: Checkout Repository
