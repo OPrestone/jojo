@@ -30,8 +30,7 @@ jobs:
       with:
         ftp-server: ftp.mix.co.ke
         ftp-username: gitaccess@jojosfashion.com
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./fashion/
+        ftp-password: ${{ secrets.FTP_PASSWORD }} 
 - name: Debug Deployment
   run: |
     ls -la ./fashion/  # List files in the deployment directory
